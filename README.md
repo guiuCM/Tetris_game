@@ -15,7 +15,12 @@ Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/guiuCM/Tetris_game.git
 cd Tetris_game
-npm install
+
 
 ## Running
+cd tetris/
+npm install
 npm run dev
+
+
+![Game Screenshot](tetris/img.png)
