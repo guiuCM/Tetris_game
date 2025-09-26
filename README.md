@@ -27,8 +27,5 @@ npm run dev
 
 ## 📷 Screenshots
 
-![Tetris Start Screen](https://raw.githubusercontent.com/guiuCM/Tetris_game/main/tetris/img.png)
-![Tetris Gameplay](https://raw.githubusercontent.com/guiuCM/Tetris_game/main/tetris/img_game.png)
-
-![Tetris Start Screen](tetris/img.png)
-![Tetris Gameplay](tetris/img_game.png)
+![Tetris Start Screen](https://github.com/guiuCM/Tetris_game/blob/main/tetris/img.png?raw=true)
+![Tetris Gameplay](https://github.com/guiuCM/Tetris_game/blob/main/tetris/img_game.png?raw=true)
