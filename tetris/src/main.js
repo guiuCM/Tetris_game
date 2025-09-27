@@ -31,7 +31,16 @@ let highScores = getHighScores() // Load high scores from localStorage
 // High score functions
 function getHighScores() {
   const scores = localStorage.getItem('tetrisHighScores')
-  return scores ? JSON.parse(scores) : []
+  let parsedScores = scores ? JSON.parse(scores) : []
+  
+  // If we have more than 5 scores, trim to top 5 and save
+  if (parsedScores.length > 5) {
+    parsedScores.sort((a, b) => b.score - a.score)
+    parsedScores = parsedScores.slice(0, 5)
+    localStorage.setItem('tetrisHighScores', JSON.stringify(parsedScores))
+  }
+  
+  return parsedScores
 }
 
 function saveHighScore(score) {
@@ -41,15 +50,16 @@ function saveHighScore(score) {
     timestamp: Date.now()
   })
   
-  // Keep only top 10 scores
+  // Keep only top 5 scores
   highScores.sort((a, b) => b.score - a.score)
-  highScores = highScores.slice(0, 10)
+  highScores = highScores.slice(0, 5)
   
   localStorage.setItem('tetrisHighScores', JSON.stringify(highScores))
 }
 
+//canviar a 5 highscore?
 function isNewHighScore(score) {
-  return highScores.length < 10 || score > highScores[highScores.length - 1].score
+  return highScores.length < 5 || score > highScores[highScores.length - 1].score
 }
 
 // set the canvas size
@@ -90,6 +100,9 @@ function initGame() {
 
 //other pieces
 const pieces = [
+  [
+    [1, 1, 1, 1] // I piece
+  ],
   [
     [1, 1, 1, 1] // I piece
   ],
