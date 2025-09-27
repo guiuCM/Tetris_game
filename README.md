@@ -22,6 +22,12 @@ cd tetris/
 npm install
 npm run dev
 
+```
+
+
 ## 📷 Screenshots
-![Tetris Start Screen](tetris/img.png)
-![Tetris Gameplay](tetris/img_game.png)
+
+<p align="center">
+  <img src="tetris/img.png" alt="Tetris Start Screen" width="400"/>
+  <img src="tetris/img_game.png" alt="Tetris Gameplay" width="400"/>
+</p>
